@@ -2,6 +2,7 @@ package sample;
 
 import javafx.application.Application;
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -14,6 +15,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 import static sample.Controller.jeu;
+import static sample.Controller.*;
 
 public class Main extends Application implements EventHandler<MouseEvent> {
     final static Carte[] cartes = {new Carte(Color.RED),new Carte(Color.RED), new Carte(Color.GREEN),
@@ -23,16 +25,10 @@ public class Main extends Application implements EventHandler<MouseEvent> {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-
-        BorderPane menu = new BorderPane();
-        Scene sceneMenu = new Scene(menu,700,500);
-        Scene sceneJeu = new Scene(jeu,700,500);
-
+        BorderPane menu = FXMLLoader.load(getClass().getResource("menu.fxml"));
         primaryStage.setTitle("Menu");
-
         primaryStage.setScene(sceneMenu);
         primaryStage.show();
-
         /*code custom*/
         for(int index = 0; index < cartes.length ; index++){
             cartes[index].getFormeDeLaCarte().setStroke(cartes[index].getCouleurDeLaCarte());
@@ -63,11 +59,6 @@ public class Main extends Application implements EventHandler<MouseEvent> {
     public void handle(MouseEvent event) {
 
     }
-
-
-
-
-
     public static void main(String[] args) {
         launch(args);
     }

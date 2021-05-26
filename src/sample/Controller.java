@@ -8,37 +8,37 @@ import javafx.scene.shape.Rectangle;
 public class Controller {
     //(Nous sommes obliger de faire ça sous IntelliJ)
     @FXML
-    Button BtnRetour = new Button();
+    public static Button BtnRetour = new Button();
     @FXML
-    Rectangle Rectangle00 = new Rectangle();
+    public static Rectangle Rectangle00 = new Rectangle();
     @FXML
-    Rectangle Rectangle01 = new Rectangle();
+    public static Rectangle Rectangle01 = new Rectangle();
     @FXML
-    Rectangle Rectangle02 = new Rectangle();
+    public static Rectangle Rectangle02 = new Rectangle(); //Il est à 2,1 ! (x,y)
     @FXML
-    Rectangle Rectangle03 = new Rectangle();
+    public static Rectangle Rectangle03 = new Rectangle();
     @FXML
-    Rectangle Rectangle04 = new Rectangle();
+    public static Rectangle Rectangle04 = new Rectangle();
     @FXML
-    Rectangle Rectangle05 = new Rectangle();
+    public static Rectangle Rectangle05 = new Rectangle();
     @FXML
-    Rectangle Rectangle06 = new Rectangle();
+    public static Rectangle Rectangle06 = new Rectangle();
     @FXML
-    Rectangle Rectangle07 = new Rectangle();
+    public static Rectangle Rectangle07 = new Rectangle();
     @FXML
-    Rectangle Rectangle08 = new Rectangle();
+    public static Rectangle Rectangle08 = new Rectangle();
     @FXML
-    Rectangle Rectangle09 = new Rectangle();
+    public static Rectangle Rectangle09 = new Rectangle();
     @FXML
-    Rectangle Rectangle10 = new Rectangle();
+    public static Rectangle Rectangle10 = new Rectangle();
     @FXML
-    Rectangle Rectangle11 = new Rectangle();
+    public static Rectangle Rectangle11 = new Rectangle();
     @FXML
     public static BorderPane jeu = new BorderPane();
     //Fin de l'instant InteliJ
 
     public void retourMenu(){
-
+        Main.changerScene();
     }
 
     public void retournerCarte(){
